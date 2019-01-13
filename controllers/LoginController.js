@@ -1,8 +1,15 @@
+const users = require('../users/index.js');
+const { jwtSecret } = require('../config.js');
+const auth = require('../util/auth.js');
+
 module.exports = {
-	create(req, res) {
-		return res.json({ message: 'Hi' });
-	},
-	store(req, res) {
-		return res.json({ message: 'Hi, stored' });
+	store({ body }, res) {
+		try {
+			const user = auth.login(body.username, body.password);
+			return res.json({ ...user });
+		}
+		catch (error) {
+			return res.status(400).json({ message: error.message });
+		}
 	}
 };

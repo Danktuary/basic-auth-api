@@ -1,5 +1,5 @@
 module.exports = [
-	{ id: 2, name: 'Sanc', password: '1' },
-	{ id: 1, name: 'Dank', password: '2' },
-	{ id: 3, name: 'Tank', password: '3' },
+	{ id: 1, username: 'Sanc', password: '1' },
+	{ id: 2, username: 'Dank', password: '2' },
+	{ id: 3, username: 'Test', password: 'test' },
 ];

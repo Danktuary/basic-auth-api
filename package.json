@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "serve": "node ."
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",

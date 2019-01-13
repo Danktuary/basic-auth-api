@@ -1,5 +1,5 @@
 module.exports = {
 	home: require('./home.js'),
-	users: require('./users.js'),
+	threads: require('./threads.js'),
 	login: require('./login.js'),
 };
