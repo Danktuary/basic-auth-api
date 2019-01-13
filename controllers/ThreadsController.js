@@ -2,6 +2,7 @@ const threads = [
 	{ id: 1, name: 'Hi, I\'m new' },
 	{ id: 2, name: 'Hi, I\'m new 2' },
 	{ id: 3, name: 'Hi, I\'m new 3', private: true },
+	{ id: 4, name: 'Hi, I\'m new 4', private: true },
 ];
 
 module.exports = {
