@@ -9,6 +9,12 @@ module.exports = {
 		return res.json(threads);
 	},
 	show(req, res) {
-		return res.json(threads.find(thread => thread.id === parseInt(req.params.id)));
+		const thread = threads.find(t => t.id === parseInt(req.params.id))
+
+		if (thread.private) {
+			return res.status(401).json({ message: 'You don\'t have permission to view this thread' });
+		}
+
+		return res.json(thread);
 	},
 };
